@@ -22,19 +22,21 @@ export const App = () => {
       title: "Website",
       width: 200,
       Cell: (row) => {
+        /*  TODO: For task 3 I tried to stop event propagation by making pointer disable while  hovering
+      over but not sure that the ideal way    (⌣̩̩́_⌣̩̩̀) */
         return <Link showText={row.website} to={"https://www.google.com/"} />;
       },
     },
   ];
 
-  const memoisedColumns = useMemo(() => columns, []);
-  const memoisedData = useMemo(() => userData, [userData]);
-  console.log(memoisedData);
+  const useTableColumns = useMemo(() => columns, []);
+  const useTableData = useMemo(() => userData, [userData]);
+
   return (
     <Table
       id="userTable"
-      columns={memoisedColumns}
-      data={memoisedData}
+      columns={useTableColumns}
+      data={useTableData}
       expandRow={(rowId) => {
         const updatedData = userData.map((row) => {
           return row.id === rowId
