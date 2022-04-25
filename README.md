@@ -1,5 +1,5 @@
 
-## Task -2 is on master branch (Collapsible table is under master branch )
+## Task -2 is on master branch (Collapsible table )
 ## Task -1 is on task_1 branch (Typescript Question)
 
 
